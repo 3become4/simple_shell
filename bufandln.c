@@ -14,7 +14,7 @@ ssize_t input_buf(info_t *x, char **buf, size_t *l)
 	ssize_t r = 0;
 	size_t len_p = 0;
 
-	if (!*l) 
+	if (!*l)
 	{
 		free(*buf);
 		*buf = NULL;
@@ -61,7 +61,7 @@ ssize_t get_input(info_t *x)
 	y = input_buf(x, &buf, &l);
 	if (y == -1)
 		return (-1);
-	if (l)	
+	if (l)
 	{
 		j = i;
 		p = buf + i;
@@ -171,3 +171,4 @@ void sigintHandler(__attribute__((unused))int x)
 	_puts("$ ");
 	_putchar(BUF_FLUSH);
 }
+

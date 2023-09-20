@@ -18,9 +18,9 @@ void clear_info(info_t *x)
 
 
 /**
- * free_info - frees info_t 
+ * free_info - frees info_t
  *
- * @x: info struct 
+ * @x: info struct
  * @y: ture or false
  *
  * Return: void
@@ -53,7 +53,7 @@ void free_info(info_t *x, int y)
  * is_cmd - check if cmd
  *
  * @x: info struct
- * @path: path to file
+ * @p: path to file
  *
  * Return: 1
  */
@@ -97,7 +97,7 @@ char *dup_chars(char *p, int s, int e)
  * find_path - search path
  *
  * @x: info struct
- * @pathstr: PATH
+ * @p: PATH
  * @cmd: cmd to find
  *
  * Return: path

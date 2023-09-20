@@ -148,3 +148,4 @@ int renumber_history(info_t *x)
 	}
 	return (x->histcount = i);
 }
+

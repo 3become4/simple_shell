@@ -3,7 +3,7 @@
 
 /**
  * remove_comments - remve comments
- * 
+ *
  * @x: string
  *
  * Return: 0
@@ -61,7 +61,7 @@ int print_d(int x, int fd)
  * print_error - print error
  *
  * @x: info struct
- * @s: error string 
+ * @s: error string
  *
  * Return: 0
  */
@@ -113,4 +113,5 @@ char *convert_number(long int x, int b, int f)
 		*--y = sign;
 	return (y);
 }
+
 

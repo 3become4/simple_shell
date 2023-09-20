@@ -123,3 +123,4 @@ int _putchar(char x)
 		buf[i++] = x;
 	return (1);
 }
+

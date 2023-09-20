@@ -4,7 +4,7 @@
  * _myexit - exits the shell
  *
  * @x: info struct
- * 
+ *
  *  Return: exit code
  */
 int _myexit(info_t *x)
@@ -92,18 +92,19 @@ int _mycd(info_t *x)
 
 /**
  * _myhelp - help call
- * 
+ *
  * @x: info struct
  *
  *  Return: Always 0
  */
-int _myhelp(info_t *c)
+int _myhelp(info_t *x)
 {
 	char **arg_array;
 
-	arg_array = c->argv;
+	arg_array = x->argv;
 	_puts("help call works. Function not yet implemented \n");
 	if (0)
 		_puts(*arg_array);
 	return (0);
 }
+

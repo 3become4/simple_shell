@@ -4,7 +4,7 @@
 
 /**
  **_strchr - find character in string
- * 
+ *
  *@x: string to search
  *@c: character to look for
  *
@@ -115,3 +115,4 @@ char **strsplit(char *x, char *d)
 	s[j] = NULL;
 	return (s);
 }
+

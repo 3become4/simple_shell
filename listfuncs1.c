@@ -4,7 +4,7 @@
  * add_node - node to start of list
  *
  * @x: address to pointer
- * @s: str 
+ * @s: str
  * @n: index
  *
  * Return: size of list
@@ -37,7 +37,7 @@ list_t *add_node(list_t **x, const char *s, int n)
  * add_node_end - node to end of list
  *
  * @x: address to pointer
- * @s: str 
+ * @s: str
  * @n: index
  *
  * Return: size of list

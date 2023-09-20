@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- * 
+ *
  * @ac: arg count
  * @av: arg vector
  *
@@ -43,3 +43,4 @@ int main(int ac, char **av)
 	hsh(x, av);
 	return (EXIT_SUCCESS);
 }
+

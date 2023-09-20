@@ -89,3 +89,4 @@ int _mysetenv(info_t *x)
 		return (0);
 	return (1);
 }
+

@@ -19,7 +19,7 @@ int _strlen(char *x)
 	return (i);
 }
 /**
- * _strcmp - lexicogarphic comparison of strings
+ * _strlex - lexicogarphic comparison of strings
  *
  * @x1: string
  * @x2: string
@@ -58,7 +58,7 @@ char *starts_with(const char *hay, const char *needle)
 /**
  * _strcat - concatenates two strings
  *
- * @x: destination 
+ * @x: destination
  * @y: source
  *
  * Return: pointer to destination buffer
@@ -96,3 +96,4 @@ char *_strcpy(char *x, char *y)
 	x[i] = 0;
 	return (x);
 }
+

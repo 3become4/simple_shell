@@ -88,8 +88,8 @@ typedef struct passinfo
 	char environ;
 	int env_changed;
 	int status;
-	char **cmd_buf; 
-	int cmd_buf_type; 
+	char **cmd_buf;
+	int cmd_buf_type;
 	int readfd;
 	int histcount;
 } info_t;
@@ -171,9 +171,9 @@ int _mycd(info_t *);
 int _myhelp(info_t *);
 
 /* aliases */
-int unset_alias(info_t *, char *)
-int set_alias(info_t *, char *)
-int print_alias(list_t *)
+int unset_alias(info_t *, char *);
+int set_alias(info_t *, char *);
+int print_alias(list_t *);
 int _myalias(info_t *);
 
 /* env functions */
@@ -212,10 +212,11 @@ int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
 /* buffers and lines */
-ssize_t input_buf(info_t *, char **, size_t *)
+ssize_t input_buf(info_t *, char **, size_t *);
 ssize_t get_input(info_t *);
-ssize_t read_buf(info_t *, char *, size_t *)
+ssize_t read_buf(info_t *, char *, size_t *);
 int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
 #endif
+

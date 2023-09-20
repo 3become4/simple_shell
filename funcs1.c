@@ -2,7 +2,7 @@
 
 /**
  * interactive - interactive mode
- * 
+ *
  * @x: info struct
  *
  * Return: 1
@@ -48,7 +48,7 @@ int _erratoi(char *x)
 	unsigned long int y = 0;
 
 	if (*x == '+')
-		x++; 
+		x++;
 	for (i = 0;  x[i] != '\0'; i++)
 	{
 		if (x[i] >= '0' && x[i] <= '9')
@@ -95,3 +95,4 @@ int is_delim(char x, char *d)
 			return (1);
 	return (0);
 }
+

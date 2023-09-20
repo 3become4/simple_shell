@@ -34,7 +34,7 @@ int find_builtin(info_t *x)
 
 /**
  * fork_cmd - fork cmd
- * 
+ *
  * @x: info struct
  *
  * Return: void
@@ -192,4 +192,5 @@ void set_info(info_t *x, char **av)
 		replace_vars(x);
 	}
 }
+
 

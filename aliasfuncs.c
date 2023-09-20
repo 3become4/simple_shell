@@ -5,7 +5,7 @@
  * unset_alias - unsets alias
  *
  * @x: info struct
- * @s:  string 
+ * @s:  string
  *
  * Return: Always 0 on success
  */
