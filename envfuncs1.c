@@ -31,13 +31,20 @@ char *_getenv(info_t *x, const char *n)
  */
 char **get_environ(info_t *x)
 {
-	if (!x->environ || x->env_changed)
+	/*
+	char *y = x->environ;
+	char *z = x->env;
+	char *a = x->env_changed
+	if (!y || a)
 	{
-		x->environ = list_to_strings(x->env);
-		x->env_changed = 0;
+		y = list_to_strings(z);
+	       	a = 0;
 	}
 
-	return (x->environ);
+	return (y);
+	*/
+	x = x;
+	return (0);
 }
 
 /**

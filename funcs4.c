@@ -40,9 +40,9 @@ void free_info(info_t *x, int y)
 			free_list(&(x->history));
 		if (x->alias)
 			free_list(&(x->alias));
-		ffree(x->environ);
+		/* bfree(x->environ);
 			x->environ = NULL;
-		bfree((void **)x->cmd_buf);
+		bfree((void **)x->cmd_buf);*/
 		if (x->readfd > 2)
 			close(x->readfd);
 		_putchar(BUF_FLUSH);

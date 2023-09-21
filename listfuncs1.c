@@ -19,11 +19,11 @@ list_t *add_node(list_t **x, const char *s, int n)
 	if (!y)
 		return (NULL);
 	_memset((void *)y, 0, sizeof(list_t));
-	y->n = n;
+	y->num = n;
 	if (s)
 	{
-		y->s = _strdup(s);
-		if (!y->s)
+		y->str = _strdup(s);
+		if (!y->str)
 		{
 			free(y);
 			return (NULL);
@@ -54,11 +54,11 @@ list_t *add_node_end(list_t **x, const char *s, int n)
 	if (!y)
 		return (NULL);
 	_memset((void *)y, 0, sizeof(list_t));
-	y->n = n;
+	y->num = n;
 	if (s)
 	{
-		y->s = _strdup(s);
-		if (!y->s)
+		y->str = _strdup(s);
+		if (!y->str)
 		{
 			free(y);
 			return (NULL);

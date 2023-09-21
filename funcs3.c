@@ -23,7 +23,7 @@ int find_builtin(info_t *x)
 	};
 
 	for (i = 0; y[i].type; i++)
-		if (_strcmp(x->argv[0], y[i].type) == 0)
+		if (_strlex(x->argv[0], y[i].type) == 0)
 		{
 			x->line_count++;
 			br = y[i].func(x);
@@ -161,36 +161,35 @@ int hsh(info_t *x, char **av)
 /**
  * set_info - initializes info_t
  *
- * @x: info struct
+ * @info: info struct
  * @av: argument vector
  *
  * Return: void
  */
-void set_info(info_t *x, char **av)
+void set_info(info_t *info, char **av)
 {
 	int i = 0;
 
-	x->fname = av[0];
-	if (x->arg)
+	info->fname = av[0];
+	if (info->arg)
 	{
-		x->argv = strtow(x->arg, " \t");
-		if (!x->argv)
+		/* info->argv = strtok(info->arg, " \t"); */
+		if (!info->argv)
 		{
 
-			x->argv = malloc(sizeof(char *) * 2);
-			if (x->argv)
+			info->argv = malloc(sizeof(char *) * 2);
+			if (info->argv)
 			{
-				x->argv[0] = _strdup(x->arg);
-				x->argv[1] = NULL;
+				info->argv[0] = _strdup(info->arg);
+				info->argv[1] = NULL;
 			}
 		}
-		for (i = 0; x->argv && x->argv[i]; i++)
+		for (i = 0; info->argv && info->argv[i]; i++)
 			;
-		x->argc = i;
+		info->argc = i;
 
-		replace_alias(x);
-		replace_vars(x);
+		replace_alias(info);
+		replace_vars(info);
 	}
 }
-
 

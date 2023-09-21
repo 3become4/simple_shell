@@ -118,13 +118,13 @@ int replace_vars(info_t *x)
 		if (x->argv[i][0] != '$' || !x->argv[i][1])
 			continue;
 
-		if (!_strcmp(x->argv[i], "$?"))
+		if (!_strlex(x->argv[i], "$?"))
 		{
 			replace_string(&(x->argv[i]),
 				_strdup(convert_number(x->status, 10, 0)));
 			continue;
 		}
-		if (!_strcmp(x->argv[i], "$$"))
+		if (!_strlex(x->argv[i], "$$"))
 		{
 			replace_string(&(x->argv[i]),
 				_strdup(convert_number(getpid(), 10, 0)));

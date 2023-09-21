@@ -126,7 +126,7 @@ char **list_to_strings(list_t *x)
 		return (NULL);
 	for (i = 0; n; n = n->next, i++)
 	{
-		s = malloc(_strlen(n->s) + 1);
+		s = malloc(_strlen(n->str) + 1);
 		if (!s)
 		{
 			for (j = 0; j < i; j++)
@@ -135,9 +135,10 @@ char **list_to_strings(list_t *x)
 			return (NULL);
 		}
 
-		s = _strcpy(s, n->s);
+		s = _strcpy(s, n->str);
 		ss[i] = s;
 	}
 	ss[i] = NULL;
 	return (ss);
 }
+
